@@ -49,13 +49,34 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 # install keras
 /mnt/bin/anaconda2/bin/pip install keras
 
-# configure keras to use tensorflow
+# configure keras
 echo '{
 "image_dim_ordering": "tf",
 "epsilon": 1e-07,
 "floatx": "float32",
 "backend": "tensorflow"
 }' > ~/.keras/keras.json
+
+# configure theano
+echo '[global]
+device = gpu
+force_device = True
+floatX = float32
+allow_gc = False
+mode = FAST_RUN
+
+[DebugMode]
+check_finite = 1
+
+[lib]
+cnmem = 1
+
+[dnn]
+enabled = True
+
+[nvcc]
+fastmath = True
+' > ~/.theanorc
 
 # install monitoring programs
 sudo wget https://git.io/gpustat.py -O /usr/local/bin/gpustat
