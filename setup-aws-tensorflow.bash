@@ -55,6 +55,7 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 /mnt/bin/anaconda2/bin/pip install --upgrade --no-deps git+https://github.com/fchollet/keras.git
 
 # configure keras
+mkdir ~/.keras/
 echo '{
 "image_dim_ordering": "tf",
 "epsilon": 1e-07,
