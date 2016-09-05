@@ -10,6 +10,8 @@ sudo chown ubuntu:ubuntu /mnt/bin
 # install the required packages
 sudo apt-get update && sudo apt-get -y upgrade
 sudo apt-get -y install linux-headers-$(uname -r) linux-image-extra-`uname -r`
+sudo apt-get -y install git
+
 
 # install cuda
 wget http://developer.download.nvidia.com/compute/cuda/repos/ubuntu1404/x86_64/cuda-repo-ubuntu1404_7.5-18_amd64.deb
@@ -46,8 +48,11 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 
 /mnt/bin/anaconda2/bin/pip install $TF_BINARY_URL
 
+# install theano
+/mnt/bin/anaconda2/bin/pip install --upgrade --no-deps git+https://github.com/Theano/Theano.git
+
 # install keras
-/mnt/bin/anaconda2/bin/pip install keras
+/mnt/bin/anaconda2/bin/pip install --upgrade git+https://github.com/fchollet/keras.git
 
 # configure keras
 echo '{
