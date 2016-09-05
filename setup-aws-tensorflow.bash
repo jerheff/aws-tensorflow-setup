@@ -58,7 +58,7 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 # configure keras
 mkdir ~/.keras/
 echo '{
-"image_dim_ordering": "tf",
+"image_dim_ordering": "th",
 "epsilon": 1e-07,
 "floatx": "float32",
 "backend": "theano"
