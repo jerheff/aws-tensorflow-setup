@@ -13,6 +13,7 @@ sudo apt-get -y install linux-headers-$(uname -r) linux-image-extra-`uname -r`
 sudo apt-get -y install git
 sudo apt-get -y install mosh
 sudo apt-get -y install awscli
+sudo apt-get -y install unzip
 
 
 # install cuda
