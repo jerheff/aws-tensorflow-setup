@@ -14,6 +14,7 @@ sudo apt-get -y install git
 sudo apt-get -y install mosh
 sudo apt-get -y install awscli
 sudo apt-get -y install unzip
+sudo apt-get -y install zram-config
 
 
 # install cuda
