@@ -52,7 +52,7 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 /mnt/bin/anaconda2/bin/pip install --upgrade --no-deps git+https://github.com/Theano/Theano.git
 
 # install keras
-/mnt/bin/anaconda2/bin/pip install --upgrade git+https://github.com/fchollet/keras.git
+/mnt/bin/anaconda2/bin/pip install --upgrade --no-deps git+https://github.com/fchollet/keras.git
 
 # configure keras
 echo '{
