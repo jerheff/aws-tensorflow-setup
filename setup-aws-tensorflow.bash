@@ -49,6 +49,14 @@ export TF_BINARY_URL='https://storage.googleapis.com/tensorflow/linux/gpu/tensor
 # install keras
 /mnt/bin/anaconda2/bin/pip install keras
 
+# configure keras to use tensorflow
+echo '{
+"image_dim_ordering": "tf",
+"epsilon": 1e-07,
+"floatx": "float32",
+"backend": "tensorflow"
+}' > ~/.keras/keras.json
+
 # install monitoring programs
 sudo wget https://git.io/gpustat.py -O /usr/local/bin/gpustat
 sudo chmod +x /usr/local/bin/gpustat
